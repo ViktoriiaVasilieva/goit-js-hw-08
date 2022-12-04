@@ -9,16 +9,16 @@ const galleryMarkup = createGallaryItemMarkup(galleryItems);
 gallaryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  animationSpeed: 250,
-  fadeSpeed: 250,
+  captionsData: 'alt',
   captionDelay: 250,
+  captions: true,
 });
 
 function createGallaryItemMarkup(items) {
   return items
     .map(({ preview, original, description }) => {
-      return `<div>
-      <a class="gallery__item" href="${original}">
+      return `<div class="gallery__item">
+      <a class="gallery__link" href="${original}">
       <img 
       class="gallery__image" 
       src="${preview}" 
