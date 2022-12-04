@@ -8,10 +8,8 @@ const galleryMarkup = createGallaryItemMarkup(galleryItems);
 
 gallaryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 
-var lightbox = new SimpleLightbox('.gallery a', {
-  captionType: 'attr',
+const lightbox = new SimpleLightbox('.gallery a', {
   animationSpeed: 250,
-  captionsData: 'alt',
   fadeSpeed: 250,
   captionDelay: 250,
 });
